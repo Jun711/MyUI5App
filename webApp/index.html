@@ -18,10 +18,15 @@
 
 		<script>
 			sap.ui.getCore().attachInit(function () {
-				sap.ui.xmlview({
-					// creating a new namespace
-					viewName : "opensap.myapp.view.App"
+				new sap.ui.core.ComponentContainer({
+					name : "opensap.myapp"
 				}).placeAt("content");
+				
+				// After using Component.js
+				// sap.ui.xmlview({
+				// 	// creating a new namespace
+				// 	viewName : "opensap.myapp.view.App"
+				// }).placeAt("content");
 				// var oImage = new sap.m.Image({
 				// 	src: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"
 				// }).placeAt("content");
