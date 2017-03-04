@@ -2,10 +2,12 @@
 sap.ui.define(
 	[
 		"sap/ui/core/mvc/Controller",
-		"sap/m/MessageToast"
-	], function (Controller, MessageToast) {
+		"sap/m/MessageToast",
+		"opensap/myapp/model/formatter"
+	], function (Controller, MessageToast, formatter) {
 	
 		Controller.extend("opensap.myapp.controller.App", {
+			formatter : formatter,
 			onShowHello : function () {
 			// read msg from i18n model
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
