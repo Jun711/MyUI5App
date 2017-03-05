@@ -7,7 +7,7 @@ sap.ui.define(
 		"sap/ui/model/Filter",
 		"sap/ui/model/FilterOperator"
 	], function (Controller, MessageToast, formatter, Filter, FilterOperator) {
-	
+		
 		Controller.extend("opensap.myapp.controller.App", {
 			formatter : formatter,
 			onShowHello : function () {
