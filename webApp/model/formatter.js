@@ -25,6 +25,19 @@ sap.ui.define([], function() {
 			}
 
 			return sResult;
+		},
+				/**
+		 * Formats an address to a static google maps image
+		 * @public
+		 * @param {string} sStreet the street
+		 * @param {string} sZIP the postal code
+		 * @param {string} sCity the city
+		 * @param {string} sCountry the country
+		 * @returns {string} sValue a google maps URL that can be bound to an image
+		 */
+		formatMapUrl: function(sStreet, sZIP, sCity, sCountry) {
+			return "https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=640x640&markers="
+				+ jQuery.sap.encodeURL(sStreet + ", " + sZIP +  " " + sCity + ", " + sCountry);
 		}
 	};
 });
@@ -53,4 +66,3 @@ sap.ui.define([], function() {
 // 		}
 // 	};
 // });
-

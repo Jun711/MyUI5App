@@ -82,6 +82,20 @@
 										text="{i18n>layoutDraftButton}"
 										icon="sap-icon://save"/>
 								</Toolbar>
+								<Panel
+									class="sapUiMediumMarginTop"
+									width="auto"
+									headerText="{i18n>mapTitle}">
+									<Image src="{
+										parts: [
+											'address>/Street',
+											'address>/ZIPCode',
+											'address>/City',
+											'address>/Country'
+										],
+										formatter: '.formatter.formatMapUrl'
+									}" />
+								</Panel>
 							</IconTabFilter>
 							<IconTabFilter
 								text="{i18n>dataBindingFilter}" key="db">
